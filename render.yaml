@@ -1,0 +1,30 @@
+services:
+  # Portfolio & Blog API
+  - type: web
+    name: portfolio-blog-api
+    runtime: node
+    plan: free
+    region: oregon
+    rootDir: .
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - fromGroup: mongodb-atlas
+    healthCheckPath: /api/health
+
+# Environment variable groups for shared configuration
+groups:
+  - name: mongodb-atlas
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+        length: 64
+
+# Auto-deploy configuration
+version: "1"
