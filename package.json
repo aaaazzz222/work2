@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-blog-fullstack",
+  "version": "1.0.0",
+  "description": "Full-stack Portfolio & Blog Application with MERN stack",
+  "scripts": {
+    "install-all": "cd backend && npm install && cd ../frontend && npm install",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "dev": "echo 'Please run backend and frontend in separate terminals:\n  Terminal 1: npm run backend\n  Terminal 2: npm run frontend'"
+  },
+  "keywords": [
+    "portfolio",
+    "blog",
+    "mern",
+    "react",
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "MIT"
+}
